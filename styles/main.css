@@ -1,0 +1,23 @@
+@import "reset.css";
+@import "gallery.css";
+
+body{
+    padding: 20px;
+}
+
+nav {    
+    height: 15vh;
+    background-color: indianred;
+}
+
+section.slide{
+    height: 85vh;
+    padding: 20px 0 40px 0;
+
+}
+
+section.slide div.items{
+    height: 100%;
+    background-color: lightblue;
+
+}
