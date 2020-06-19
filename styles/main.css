@@ -1,23 +1,46 @@
 @import "reset.css";
 @import "gallery.css";
 
+
 body{
     padding: 20px;
+    position: relative;
 }
 
 nav {    
-    height: 15vh;
-    background-color: indianred;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    height: 5vh;
+    position: static;
+    background-color: white;
+    z-index: 1;
 }
 
-section.slide{
-    height: 85vh;
-    padding: 20px 0 40px 0;
+div.buttons > ul {
+    display: flex;
+}
 
+div.buttons > ul li{
+    margin-right: 50px;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 2.4px;
+    font-size: 1.2rem;
+}
+
+div.buttons > ul li:last-child{
+    margin-right: 0;
+}
+
+
+
+section.slide{
+    height: 95vh;
+    padding: 20px 0 40px 0;
 }
 
 section.slide div.items{
     height: 100%;
     background-color: lightblue;
-
 }
