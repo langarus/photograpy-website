@@ -13,11 +13,11 @@ function callBack(entries){
     if(entries[0].isIntersecting){
         
         navBar.style.position = "sticky"
-        back.style.display = "block"
+        back.style.opacity = "1"
         console.log("works")
     }else{
         navBar.style.position = "static"
-        back.style.display = "none"
+        back.style.opacity = "0"
         }
 }
 

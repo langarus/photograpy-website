@@ -2,7 +2,10 @@
   font-family: "majestiBanner";
   src: url("/styles/fonts/Majesti-Banner-Light.otf") format("opentype");
 }
-
+@font-face{
+  font-family: "Futura";
+  src: url("/styles/fonts/FuturaStd-CondensedBold.otf");
+}
 
 
 section.galleries{
@@ -27,7 +30,6 @@ section.galleries{
   }
 
   .overlay{
-    background-color: khaki;
     opacity: 0;
   }
   
@@ -35,7 +37,6 @@ section.galleries{
 .blog-posts{
   position: relative;
   overflow: hidden;
-
 }
 
 .overlay{
@@ -45,27 +46,61 @@ section.galleries{
   top: 0;
   left: 0;
   transition: all 0.3s;
+
 }
 
-.blog-posts:hover > .overlay{
+.full-background{
+  position: absolute;
+  top: 0;
+  left: 0;
+  outline: 3.6vw solid rgba(245, 242, 233, 1);
+  outline-offset: -3vw;
+  opacity: 08888;
+  opacity: 1;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(245, 242, 233, 0.7);
+}
+
+.blog-posts:hover  .overlay{
   opacity: 1;
 }
 
-.blog-posts:hover > .gallery1{
-
-  outline: 50px solid white;
-  outline-offset: -50px;
-
+.text{
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  z-index: 1;
+  opacity: 1;
 }
 
-.overlay > p{  
-  position: absolute;
-  bottom: 20px;
+.date{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  letter-spacing: .6rem;
+}
+
+.name{
   font-size: 3.6rem;
   font-family: "majestiBanner";
   color: #373737;
+}
 
+.open{
+  position: absolute;
   width: 100%;
+  bottom: 5%;
   text-align: center;
 
+  font-family: "Futura";
+  font-size: 1.1rem;
+  letter-spacing: .66rem;
+  text-transform: uppercase;
 }
