@@ -1,5 +1,5 @@
 
-section.slide{
+.slide{
     height: 95vh;
     padding: 20px 0 40px 0;
 
@@ -7,40 +7,11 @@ section.slide{
 
 }
 
-section.slide img{
+.slide img{
     height: 100%;
     width: 100%;
-    object-fit: cover;
-    
+    object-fit: cover;    
 }
-
-/* .slide > div{
-    opacity: 0;
-
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 20px;
-    width: 100%;
-    height: 100%;
-    z-index:1;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 3%;
-    transition: opacity .2s;
-}
-
-.slide-buttons > svg{
-    color: white;
-    cursor: pointer;
-
-}
-
-.slide:hover .slide-buttons{
-    opacity: 1;
-}
-     */
 
 .slide-buttons{
     position: absolute;
@@ -48,6 +19,10 @@ section.slide img{
     left: 0;
     width: 100%;
     height: calc(100% - 60px);
+}
+
+/* added a new class to left/right, for hidden */
+.slide-hidden{
     opacity: 0;
     transition: opacity .2s;
 }
@@ -56,7 +31,7 @@ section.slide img{
     position: absolute;
     left: 0;
     top: 0;
-    width: 10%;
+    width: 5%;
     height: 100%;
     cursor: pointer;
     display: flex;
@@ -68,7 +43,7 @@ section.slide img{
     position: absolute;
     right: 0;
     top: 0;
-    width: 10%;
+    width: 5%;
     height: 100%;
     cursor: pointer;
     display: flex;
@@ -80,7 +55,39 @@ section.slide img{
     color: white;
 }
 
-.slide:hover > div{
+.slide:hover > div > .slide-hidden{
     opacity:1;
 }
 
+.bottom-section{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 15%;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+.slide-bottom-button{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    letter-spacing: .44rem;
+    color: white;
+    opacity: 1;
+  }
+
+.bottom-section > svg{
+    fill: white;
+    position: absolute;
+    top: 46%;
+    margin-right: 5px;
+    transition: all .3s;
+}
+
+.bottom-section:hover > svg{
+    top: 53%;
+}
