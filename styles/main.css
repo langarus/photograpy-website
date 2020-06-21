@@ -1,5 +1,6 @@
 @import "reset.css";
 @import "gallery.css";
+@import "slide.css";
 
 
 body{
@@ -25,7 +26,7 @@ nav {
     height: 5vh;
     position: fixed;
     top: 0;
-    padding: 40px 0;
+    padding: 40px 0 50px 0;
     background-color:white;
     z-index: 1;
     /* transition: all ease-in .1s; */
@@ -70,17 +71,3 @@ div.buttons > ul li:last-child{
 
 
 
-section.slide{
-    height: 95vh;
-
-    padding: 20px 0 40px 0;
-
-}
-
-section.slide img{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-
-
-}
