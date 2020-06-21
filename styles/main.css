@@ -1,6 +1,7 @@
 @import "reset.css";
 @import "gallery.css";
 @import "slide.css";
+@import "footer.css";
 
 
 body{
@@ -70,4 +71,8 @@ div.buttons > ul li:last-child{
 }
 
 
-
+.empty-space{
+    
+    padding-top: 6%;
+    padding-bottom: 20px;
+}
