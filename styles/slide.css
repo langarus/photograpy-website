@@ -2,8 +2,11 @@
 .slide{
     height: 95vh;
     padding: 20px 0 40px 0;
-
     position: relative;
+
+}
+
+.slide:hover > .slider-main-image{
 
 }
 
