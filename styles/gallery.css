@@ -110,3 +110,7 @@ section.galleries{
   letter-spacing: .66rem;
   text-transform: uppercase;
 }
+
+.gallery1{
+  min-width: 100%;
+}

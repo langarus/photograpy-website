@@ -91,3 +91,7 @@
 .bottom-section:hover > svg{
     top: 53%;
 }
+
+.las{
+    color: white;
+}
