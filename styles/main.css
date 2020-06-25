@@ -173,8 +173,14 @@ nav {
 }
 
 @media (max-width: 768px) {
+	body{
+		padding: 0px;
+		padding-top: 10px;
+	}
+	
 	.slide {
 		height: 55vh;
+		padding: 10px 0;
 	}
 	.galleries {
 		padding-bottom: 0px;
@@ -201,7 +207,10 @@ nav {
 		position: absolute;
 		left: 0;
 		top: 66%;
-		height: 30%;
+		height: 32%;
+	}
+	.text{
+		justify-content: space-around;
 	}
 	.date,
 	.open {
@@ -209,6 +218,7 @@ nav {
 	}
 	.open {
 		bottom: 10%;
+		position: static;
 	}
 	.name {
 		font-size: 6vw;
