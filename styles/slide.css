@@ -1,95 +1,97 @@
-
-.slide{
-    height: 95vh;
-    padding: 20px 0 40px 0;
-    position: relative;
-
-}
-.slide img{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;    
+.slide {
+	height: 95vh;
+	padding: 20px 0 40px 0;
+	position: relative;
 }
 
-.slide-buttons{
-    position: absolute;
-    top: 20px;
-    left: 0;
-    width: 100%;
-    height: calc(100% - 60px);
+.slide img {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
 }
+
+.slide-buttons {
+	position: absolute;
+	top: 20px;
+	left: 0;
+	width: 100%;
+	height: calc(100% - 60px);
+}
+
 
 /* added a new class to left/right, for hidden */
-.slide-hidden{
-    opacity: 0;
-    transition: opacity .2s;
+
+.slide-hidden {
+	opacity: 0;
+	transition: opacity .2s;
 }
 
-.left-section{
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 5%;
-    height: 100%;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-}
-.right-section{
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 5%;
-    height: 100%;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.left-section {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 5%;
+	height: 100%;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
-.left-section svg, .right-section svg{
-    color: white;
+.right-section {
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 5%;
+	height: 100%;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
-.slide:hover > div > .slide-hidden{
-    opacity:1;
+.left-section svg,
+.right-section svg {
+	color: white;
 }
 
-.bottom-section{
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 15%;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-}
-.slide-bottom-button{
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.1rem;
-    letter-spacing: .44rem;
-    color: white;
-    opacity: 1;
-  }
-
-.bottom-section > svg{
-    fill: white;
-    position: absolute;
-    top: 46%;
-    margin-right: 5px;
-    transition: all .3s;
+.slide:hover>div>.slide-hidden {
+	opacity: 1;
 }
 
-.bottom-section:hover > svg{
-    top: 53%;
+.bottom-section {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 15%;
+	cursor: pointer;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
 
-.las{
-    color: white;
+.slide-bottom-button {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1.1rem;
+	letter-spacing: .44rem;
+	color: white;
+	opacity: 1;
+}
+
+.bottom-section>svg {
+	fill: white;
+	position: absolute;
+	top: 46%;
+	margin-right: 5px;
+	transition: all .3s;
+}
+
+.bottom-section:hover>svg {
+	top: 53%;
+}
+
+.las {
+	color: white;
 }

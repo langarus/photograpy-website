@@ -1,249 +1,223 @@
+
+
 @import "reset.css";
 @import "gallery.css";
 @import "slide.css";
 @import "footer.css";
 @import "slider-script.css";
-
-
-body{
-    padding: 20px;
-    position: relative;
+body {
+	padding: 20px;
+	position: relative;
 }
 
-nav {    
-    height: 5vh;
-    position: relative;
-    top: 20px;
-    background-color: white;
-    z-index: 3;
-    transition: all 2s;
+nav {
+	height: 5vh;
+	position: relative;
+	top: 20px;
+	background-color: white;
+	z-index: 3;
+	transition: all 2s;
 }
 
-.mobile-nav{
-    /* position: absolute; */
-    /* top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%; */
-    display: none;
-    justify-content: space-between;
-    align-items: center;
 
+/* ----MOBILE NAV ----*/
+
+.mobile-nav {
+	display: none;
+	justify-content: space-between;
+	align-items: center;
 }
 
-.hamburger-button{
-    height: 100%;
-    z-index: 4;
+.hamburger-button {
+	height: 100%;
+	z-index: 4;
 }
+
+
+/* hamburger button svg */
 
 .la-bars {
-    color: black;    
+	color: black;
 }
 
-.mobile-side{
-    position: absolute;
-    /* display: none; */
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 70%;
-    background-color: white;
-    z-index: 5;
-    transform: translate(-100%, 0);
-    transition: ease .3s;
-    
+
+/* the white side with menu */
+
+.mobile-side {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 70%;
+	background-color: white;
+	z-index: 5;
+	transform: translate(-100%, 0);
+	transition: ease 0.3s;
 }
 
-.mobile-nav-btns{
-    margin-top: 0;
-    height: 30vh;
-    width: 100%;
-    padding-left: 20%;
-
+.mobile-nav-btns {
+	margin-top: 0;
+	height: 30vh;
+	width: 100%;
+	padding-left: 20%;
 }
 
-.mobile-nav-btns > ul{    
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 100%;
-    align-items: flex-start;
-    justify-content: space-evenly;
+.mobile-nav-btns>ul {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	width: 100%;
+	align-items: flex-start;
+	justify-content: space-evenly;
 }
 
-.mobile-nav-btns > ul li{
-    font-family: 'Montserrat', sans-serif;
-    letter-spacing: 2.4px;
-    font-size: 1.2rem;
-    /* z-index: 3; */
+.mobile-nav-btns>ul li {
+	font-family: "Montserrat", sans-serif;
+	letter-spacing: 2.4px;
+	font-size: 1.2rem;
 }
 
-.mobile-nav-btns > ul > li > a{
-    text-decoration: none;
-    color: #373737;
-    transition: color .3s;
+.mobile-nav-btns>ul>li>a {
+	text-decoration: none;
+	color: #373737;
+	transition: color 0.3s;
 }
+
 
 /* x button on mobile nav side */
-.la-times{
-    color: black;
-    padding-top: 25px;
-    padding-left: 20px;
+
+.la-times {
+	color: black;
+	padding-top: 25px;
+	padding-left: 20px;
 }
 
 
+/* -----DESKTOP NAV---- */
 
-.desktop-nav{
-    /* display: none; */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    height: 100%;
+.desktop-nav {
+	/* display: none; */
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	height: 100%;
 }
+
 
 /* used for when nav is coming down from top - it's actually background for nav */
-.hidden-nav{
-    opacity: 0;
-    width: 100%;
-    height: 5vh;
-    position: fixed;
-    top: 0;
-    padding: 40px 0 50px 0;
-    background-color:white;
-    z-index: 2;
+
+.hidden-nav {
+	opacity: 0;
+	width: 100%;
+	height: 5vh;
+	position: fixed;
+	top: 0;
+	padding: 40px 0 50px 0;
+	background-color: white;
+	z-index: 2;
 }
 
-.logo-container{
-    z-index: 3;
-    transition: opacity .2s;
+.logo-container {
+	z-index: 3;
+	transition: opacity 0.2s;
 }
 
-.logo-container:hover{
-    opacity: 0.7
+.logo-container:hover {
+	opacity: 0.7;
 }
 
-
-div.buttons > ul {
-    display: flex;
+.buttons>ul {
+	display: flex;
 }
 
-div.buttons > ul li{
-    margin-right: 50px;
-    font-family: 'Montserrat', sans-serif;
-    letter-spacing: 2.4px;
-    font-size: 1.2rem;
-    z-index: 3;
+.buttons>ul li {
+	margin-right: 50px;
+	font-family: "Montserrat", sans-serif;
+	letter-spacing: 2.4px;
+	font-size: 1.2rem;
+	z-index: 3;
 }
 
-.buttons > ul > li > a{
-    text-decoration: none;
-    color: #373737;
-    transition: color .3s;
+.buttons>ul>li>a {
+	text-decoration: none;
+	color: #373737;
+	transition: color 0.3s;
 }
 
-.buttons > ul > li > a:hover{
-    color: #a5a4a4;    
-
+.buttons>ul>li>a:hover {
+	color: #a5a4a4;
 }
 
-div.buttons > ul li:last-child{
-    margin-right: 0;
+.buttons>ul li:last-child {
+	margin-right: 0;
 }
 
-
-.empty-space{
-    
-    padding-top: 6%;
-    padding-bottom: 20px;
+.empty-space {
+	padding-top: 6%;
+	padding-bottom: 20px;
 }
 
-
-@media (max-width: 768px){
-
-    section.slide{
-        height: 55vh;
-    }
-
-    section.galleries{
-        padding-bottom: 0;
-    }
-    .grid-container{
-        display: block;
-        position: static;
-    }
-
-    .slide-hidden{
-        display: none;
-    }
-    .bottom-section{
-        height: 25%;
-    }
-
-    .overlay{
-        position: static;
-        opacity: 1;
-
-    }
-
-    .blog-posts{
-        position: relative;
-        padding-bottom: 30%;
-    }
-
-    .overlay{
-        position: absolute;
-        left: 0;
-        top: 66%;
-
-        
-        height: 30%;
-
-    }
-
-    .date, .open{
-        font-size: 2vw
-    }
-
-    .open{
-        bottom: 10%;
-    }
-
-    .name {
-        font-size: 6vw;
-    }
-
-    .desktop-nav{
-        display: none;
-    }
-
-    .mobile-nav{
-        display: flex;
-    
-    }
-    
-
-
-
-
+@media (min-width: 769px) and (max-width: 1024px) {
+	/* Display two galleries on row */
+	section.galleries {
+		padding-bottom: 160.25%;
+	}
+	.grid-container {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+		gap: 0.2% 0.2%;
+		grid-template-areas: ". ." ". ." ". ." ". .";
+	}
 }
 
-@media (min-width: 769px) and (max-width: 1024px){
-
-    section.galleries{
-        padding-bottom: 160.25%;
-     }
-    
-    .grid-container {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-        gap: .2% .2%;
-        grid-template-areas: ". ." ". ." ". ." ". .";    
-    
-      }
-    
+@media (max-width: 768px) {
+	.slide {
+		height: 55vh;
+	}
+	.galleries {
+		padding-bottom: 0px;
+	}
+	.grid-container {
+		display: block;
+		position: static;
+	}
+	.slide-hidden {
+		display: none;
+	}
+	.bottom-section {
+		height: 25%;
+	}
+	.overlay {
+		position: static;
+		opacity: 1;
+	}
+	.blog-posts {
+		position: relative;
+		padding-bottom: 30%;
+	}
+	.overlay {
+		position: absolute;
+		left: 0;
+		top: 66%;
+		height: 30%;
+	}
+	.date,
+	.open {
+		font-size: 2vw;
+	}
+	.open {
+		bottom: 10%;
+	}
+	.name {
+		font-size: 6vw;
+	}
+	.desktop-nav {
+		display: none;
+	}
+	.mobile-nav {
+		display: flex;
+	}
 }
-
-
 

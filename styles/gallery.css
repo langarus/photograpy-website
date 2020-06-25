@@ -1,61 +1,55 @@
-@font-face{
+@font-face {
   font-family: "majestiBanner";
   src: url("/styles/fonts/Majesti-Banner-Light.otf") format("opentype");
 }
-@font-face{
+@font-face {
   font-family: "Futura";
   src: url("/styles/fonts/FuturaStd-CondensedBold.otf");
 }
 
-
-section.galleries{
-    position: relative;
-    padding-bottom: 56.25%;
- }
-
-
+.galleries {
+  position: relative;
+  padding-bottom: 56.25%;
+}
 
 .grid-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    gap: .2% .2%;
-    grid-template-areas: ". . ." ". . ." ". . .";
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0.2% 0.2%;
+  grid-template-areas: ". . ." ". . ." ". . .";
 
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
 
-  .overlay{
-    opacity: 0;
-  }
-  
+.overlay {
+  opacity: 0;
+}
 
-.blog-posts{
+.blog-posts {
   position: relative;
   overflow: hidden;
 }
 
-.blog-posts a{
+.blog-posts a {
   text-decoration: none;
-  color: #373737; 
+  color: #373737;
 }
 
-
-.overlay{
+.overlay {
   position: absolute;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
   transition: all 0.3s;
-
 }
 
-.full-background{
+.full-background {
   position: absolute;
   top: 0;
   left: 0;
@@ -68,11 +62,11 @@ section.galleries{
   background-color: rgba(245, 242, 233, 0.7);
 }
 
-.blog-posts:hover  .overlay{
+.blog-posts:hover .overlay {
   opacity: 1;
 }
 
-.text{
+.text {
   position: absolute;
   top: 0;
   left: 0;
@@ -87,19 +81,19 @@ section.galleries{
   opacity: 1;
 }
 
-.date{
-  font-family: 'Montserrat', sans-serif;
+.date {
+  font-family: "Montserrat", sans-serif;
   font-size: 1rem;
-  letter-spacing: .6rem;
+  letter-spacing: 0.6rem;
 }
 
-.name{
+.name {
   font-size: 3.6rem;
   font-family: "majestiBanner";
   color: #373737;
 }
 
-.open{
+.open {
   position: absolute;
   width: 100%;
   bottom: 5%;
@@ -107,10 +101,10 @@ section.galleries{
 
   font-family: "Futura";
   font-size: 1.1rem;
-  letter-spacing: .66rem;
+  letter-spacing: 0.66rem;
   text-transform: uppercase;
 }
 
-.gallery1{
+.gallery1 {
   min-width: 100%;
 }
