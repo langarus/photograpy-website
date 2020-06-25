@@ -1,4 +1,10 @@
+//slider - I create two listeners, one for half of gallery and the other for slider
+// when it is at the middle of gallery or when slider not visible - show navbar
+
 const galleries = document.querySelector(".galleries")
+const slider = document.querySelector(".slide")
+const navBar = document.querySelector("nav")
+const back = document.querySelector(".hidden-nav")
 
 const options = {
     root: null,
@@ -6,15 +12,14 @@ const options = {
     threshold: 0.5
   }  
   
-function callBack(entries){
-    const navBar = document.querySelector("nav")
-    const back = document.querySelector(".hidden-nav")
+let sliderVisible = 1;
 
-    if(entries[0].isIntersecting){
+function callBack(entries){
+
+    if(entries[0].isIntersecting || !sliderVisible){
         
         navBar.style.position = "sticky"
         back.style.opacity = "1"
-        console.log("works")
     }else{
         navBar.style.position = "static"
         back.style.opacity = "0"
@@ -22,9 +27,28 @@ function callBack(entries){
 }
 
 let observer = new IntersectionObserver(callBack, options)
-
 observer.observe(galleries)
 
+    //this is listener for slider
+function callBack2(entries){
+    if(entries[0].isIntersecting){
+        sliderVisible = 1
+        // console.log(sliderVisible)
+    }else{
+        sliderVisible = 0
+        // console.log(sliderVisible)
+    }
+}
+
+let observer2 = new IntersectionObserver(callBack2)
+observer2.observe(slider)
+
+
+
+
+
+// ------------
+//This is the gallery and overlay generator
 for(let i = 1; i <= 9; i++){
     const mainContainer = document.querySelector(".grid-container")
 const blogDiv = document.createElement("div")
@@ -43,80 +67,90 @@ blogDiv.innerHTML = `<a href="#">
 mainContainer.appendChild(blogDiv)
 }
 
+//------------
+// this is the code for the slider
+const sliderContainer = document.querySelector(".slide");
+const sliderimage = document.querySelector(".slider-main-image");
+const leftButton = document.querySelector(".left-section");
+const rightButton = document.querySelector(".right-section");
 
-
-for(let i = 1; i<=4; i++){
-
-}
-
+// checks to see if i'm hovering and at which picture I am
 let i = 1
-const canIRun = true
 function changeImg(){
-
-    const sliderContainer = document.querySelector(".slide");
-
-
     if (sliderContainer.dataset.hover === "false"){
-        const sliderimage = document.querySelector(".slider-main-image");
-        console.log(sliderimage.getAttribute("src"))
+        // console.log(sliderimage.getAttribute("src"))
 
-        if (sliderimage.getAttribute("src") === `styles/images/${i}.jpg`){           
-
-            if (i < 4){
-                i++;
-            }else{
-                i=1;
-            }
+        if (sliderimage.getAttribute("src") === `styles/images/${i}.jpg`){        
+            i < 4 ? i++ : i =1  
         }
 
         sliderimage.src = `styles/images/${i}.jpg`
-
         setTimeout(`changeImg()`, 2000);
     }
 }
 
 let start = new Date()
 let end = new Date()
-
-
-
-const sliderContainer = document.querySelector(".slide");
+//here I change the data-hover to true or false, and when getting outside of hovering I start the changeImg func 
+//only if I did it in more than 2000 milisec.
 sliderContainer.addEventListener("mouseenter", function(event){
     sliderContainer.dataset.hover = "true"
-    start = new Date();
-    
+    start = new Date();    
 })
+
 sliderContainer.addEventListener("mouseleave", function(event){
     sliderContainer.dataset.hover = "false"
     end = new Date();
     if (end-start > 2000){        
         setTimeout("changeImg()", 2000);
     }
-
-
 })
 
 changeImg()
 
-const rightButton = document.querySelector(".right-section")
 rightButton.addEventListener("click", function(){
-    const sliderimage = document.querySelector(".slider-main-image");
-    if (i < 4){
-        i++;
-    }else{
-        i=1;
-    }
+    i < 4 ? i++ : i = 1
     sliderimage.src = `styles/images/${i}.jpg`
 
 })
-const leftButton = document.querySelector(".left-section")
 leftButton.addEventListener("click", function(){
-    const sliderimage = document.querySelector(".slider-main-image");
-    if (i > 1){
-        i--;
-    }else{
-        i=4;
-    }
+    i > 1 ? i-- : i = 4
     sliderimage.src = `styles/images/${i}.jpg`
 
 })
+
+
+
+// this is the hidden/visible nav-bar
+
+const hamburgerMenu = document.querySelector(".hamburger-button")
+const mobileSide = document.querySelector(".mobile-side")
+const mobileCloseBtn = document.querySelector(".close-button")
+
+    // creating the white overlay when opening the mobile nav
+const entireBody = document.querySelector("body")
+const whiteOverlay = document.createElement("div")
+whiteOverlay.style.position = "absolute"
+whiteOverlay.style.top = "0"
+whiteOverlay.style.left = "0"
+whiteOverlay.style.width = "100%"
+whiteOverlay.style.height = "100%"
+whiteOverlay.style.backgroundColor = "white"
+whiteOverlay.style.opacity = ".3"
+whiteOverlay.style.zIndex = "4"
+whiteOverlay.textContent = ""
+
+
+
+hamburgerMenu.addEventListener("click", function(e){
+    e.preventDefault(); 
+    mobileSide.style.transform = "translate(0, 0)";
+    entireBody.appendChild(whiteOverlay)
+})
+
+mobileCloseBtn.addEventListener("click", function(e){
+    e.preventDefault();
+    mobileSide.style.transform = "translate(-100%, 0)";
+    entireBody.removeChild(whiteOverlay)
+})
+
