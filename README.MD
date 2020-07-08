@@ -10,6 +10,6 @@ I've made this project as an exercise of creating layouts with grid and flexbox 
 6. When under 1024 will show only two gallery posts per row
 7. When under 768 there is hamburger nav, with side nav coming from left.
 
-See the LIVE VERSION(https://langarus.github.io/photograpy-website/)
+See the [LIVE VERSION](https://langarus.github.io/photograpy-website/)
 
 
